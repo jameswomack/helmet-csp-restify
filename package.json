@@ -1,16 +1,15 @@
 {
-  "name": "helmet-csp",
+  "name": "helmet-csp-restify",
   "author": "Adam Baldwin <baldwin@andyet.net> (http://andyet.net/team/baldwin)",
   "contributors": [
     "Evan Hahn <me@evanhahn.com> (http://evanhahn.com)"
   ],
   "description": "Content Security Policy middleware.",
-  "version": "0.2.3",
+  "version": "1.0.0",
   "keywords": [
     "helmet",
     "security",
-    "express",
-    "connect",
+    "restify",
     "content",
     "security",
     "policy",
@@ -19,9 +18,9 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git://github.com/helmetjs/csp.git"
+    "url": "git://github.com/jameswomack/helmet-csp-restify.git"
   },
-  "bugs": "https://github.com/helmetjs/csp/issues",
+  "bugs": "https://github.com/jameswomack/helmet-csp-restify/issues",
   "scripts": {
     "test": "mocha"
   },
@@ -31,9 +30,9 @@
     "core-util-is": "1.0.1"
   },
   "devDependencies": {
-    "connect": "^3.3.5",
     "lodash": "^3.7.0",
     "mocha": "^2.2.1",
+    "restify": "3.0.3",
     "supertest": "^0.15.0"
   }
 }

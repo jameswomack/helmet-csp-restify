@@ -1,12 +1,13 @@
 var csp = require("..");
 
 var _ = require("lodash");
-var connect = require("connect");
+var restify = require("restify");
 var request = require("supertest");
 var assert = require("assert");
 
-function helloWorld(req, res) {
+function helloWorld(req, res, next) {
   res.end("Hello world!");
+  next();
 }
 
 describe("csp middleware", function () {
@@ -110,9 +111,9 @@ describe("csp middleware", function () {
   };
 
   function use (policy) {
-    var result = connect();
+    var result = restify.createServer();
     result.use(csp(policy));
-    result.use(helloWorld);
+    result.get(/\/*/, helloWorld);
     return result;
   }
 
